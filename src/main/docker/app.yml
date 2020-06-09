@@ -1,0 +1,28 @@
+version: '2'
+services:
+  cmsgateway-app:
+    image: cmsgateway
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_CLOUD_CONSUL_HOST=consul
+      - SPRING_CLOUD_CONSUL_PORT=8500
+      - SPRING_DATA_MONGODB_URI=mongodb://cmsgateway-mongodb:27017/?waitQueueMultiple=1000
+      - SPRING_DATA_MONGODB_DATABASE=CmsGateway
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+    ports:
+      - 8080:8080
+  cmsgateway-mongodb:
+    extends:
+      file: mongodb.yml
+      service: cmsgateway-mongodb
+  consul:
+    extends:
+      file: consul.yml
+      service: consul
+
+  consul-config-loader:
+    extends:
+      file: consul.yml
+      service: consul-config-loader
