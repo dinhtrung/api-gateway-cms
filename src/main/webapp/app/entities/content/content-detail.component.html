@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="content">
+            <h2><span jhiTranslate="cmsGatewayApp.content.detail.title">Content</span> {{ content.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="cmsGatewayApp.content.name">Name</span></dt>
+                <dd>
+                    <span>{{ content.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.content.slug">Slug</span></dt>
+                <dd>
+                    <span>{{ content.slug }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.content.state">State</span></dt>
+                <dd>
+                    <span>{{ content.state }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.content.type">Type</span></dt>
+                <dd>
+                    <span>{{ content.type }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.content.createdAt">Created At</span></dt>
+                <dd>
+                    <span>{{ content.createdAt }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.content.updatedAt">Updated At</span></dt>
+                <dd>
+                    <span>{{ content.updatedAt }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.content.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ content.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.content.updatedBy">Updated By</span></dt>
+                <dd>
+                    <span>{{ content.updatedBy }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/content', content.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

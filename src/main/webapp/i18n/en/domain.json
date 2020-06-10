@@ -1,0 +1,29 @@
+{
+  "cmsGatewayApp": {
+    "domain": {
+      "home": {
+        "title": "Domains",
+        "createLabel": "Create a new Domain",
+        "createOrEditLabel": "Create or edit a Domain",
+        "notFound": "No Domains found"
+      },
+      "created": "A new Domain is created with identifier {{ param }}",
+      "updated": "A Domain is updated with identifier {{ param }}",
+      "deleted": "A Domain is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Domain {{ id }}?"
+      },
+      "detail": {
+        "title": "Domain"
+      },
+      "name": "Name",
+      "slug": "Slug",
+      "state": "State",
+      "description": "Description",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By"
+    }
+  }
+}

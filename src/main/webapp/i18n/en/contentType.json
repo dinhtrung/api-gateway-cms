@@ -1,0 +1,29 @@
+{
+  "cmsGatewayApp": {
+    "contentType": {
+      "home": {
+        "title": "Content Types",
+        "createLabel": "Create a new Content Type",
+        "createOrEditLabel": "Create or edit a Content Type",
+        "notFound": "No Content Types found"
+      },
+      "created": "A new Content Type is created with identifier {{ param }}",
+      "updated": "A Content Type is updated with identifier {{ param }}",
+      "deleted": "A Content Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Content Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Content Type"
+      },
+      "name": "Name",
+      "slug": "Slug",
+      "state": "State",
+      "description": "Description",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By"
+    }
+  }
+}

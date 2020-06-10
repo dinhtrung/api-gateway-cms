@@ -1,0 +1,47 @@
+entity Domain {
+	name String required,
+    slug String required unique maxlength(40),
+	state Integer required,
+	description TextBlob,
+	createdAt Instant,
+	updatedAt Instant,
+    createdBy String,
+    updatedBy String
+}
+
+entity ContentType {
+	name String
+    slug String required unique maxlength(40),
+    state Integer required,
+    description TextBlob,
+	createdAt Instant,
+	updatedAt Instant,
+    createdBy String,
+    updatedBy String
+}
+
+entity ContentField {
+	name String
+    slug String required unique maxlength(40),
+    state Integer required,
+    type String,
+	createdAt Instant,
+	updatedAt Instant,
+    createdBy String,
+    updatedBy String
+}
+
+entity Content {
+	name String
+    slug String required unique maxlength(40),
+    state Integer required,
+    type String,
+	createdAt Instant,
+	updatedAt Instant,
+    createdBy String,
+    updatedBy String
+}
+
+paginate all with pagination
+service all with serviceClass
+dto all with mapstruct

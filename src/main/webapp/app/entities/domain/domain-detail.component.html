@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="domain">
+            <h2><span jhiTranslate="cmsGatewayApp.domain.detail.title">Domain</span> {{ domain.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="cmsGatewayApp.domain.name">Name</span></dt>
+                <dd>
+                    <span>{{ domain.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.domain.slug">Slug</span></dt>
+                <dd>
+                    <span>{{ domain.slug }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.domain.state">State</span></dt>
+                <dd>
+                    <span>{{ domain.state }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.domain.description">Description</span></dt>
+                <dd>
+                    <span>{{ domain.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.domain.createdAt">Created At</span></dt>
+                <dd>
+                    <span>{{ domain.createdAt }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.domain.updatedAt">Updated At</span></dt>
+                <dd>
+                    <span>{{ domain.updatedAt }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.domain.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ domain.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="cmsGatewayApp.domain.updatedBy">Updated By</span></dt>
+                <dd>
+                    <span>{{ domain.updatedBy }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/domain', domain.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
